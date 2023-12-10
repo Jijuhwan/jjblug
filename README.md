@@ -1,3 +1,3 @@
-# study-spring-blug
+# study-spring-blog
 ### 스프링 부트 3 백엔드 개발자 되기(자바편)
 예제따라 코드 작성하며 공부!
