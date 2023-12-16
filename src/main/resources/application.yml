@@ -1,4 +1,7 @@
 spring:
+  debugging:
+    enabled: true
+
   jpa:
     # 테이블 생성시 data.sql 실행
     defer-datasource-initialization: true
