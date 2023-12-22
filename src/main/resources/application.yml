@@ -19,8 +19,23 @@ spring:
     console:
       enabled: true
 
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id:
+            client-secret:
+            scope:
+              - email
+              - profile
+
 # 2.7x 이상부터 한글 깨짐 오류 발생하여, 아래 설정 필요
 server:
   servlet:
     encoding:
       force-response: true
+
+jwt:
+  issuer: jijuhuan@gmail.com
+  secretKey: 54ffc2dfebb5aba31046ab64656a00ce3e1744467e7a9653d778febbe73144eaa8ea135d32f5f8766563ed04105c5f80b80f8a6534fee3c93152a47e056d99ed
