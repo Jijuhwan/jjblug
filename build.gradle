@@ -33,6 +33,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'	// 스프링 시큐리티를 사용하기 위한 스타터
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'	// 타임리프에서 스프링 시큐리티를 사용
 	testImplementation 'org.springframework.security:spring-security-test'	// 스프링 시큐리티를 테스트하기 위해 의존성 추가
+	testAnnotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.projectlombok:lombok'
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'	// 자바 JWT 라이브러리
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'		// jjwt-api에서 정의된 인터페이스를 실제로 구현
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'	// JWT를 Jackson의 ObjectMapper를 사용하여 JSON을 직렬화하고 역직렬화할 수 있게 한다.
+	runtimeOnly 'io.jsonwebtoken:jjwt-gson:0.11.5'
+	implementation 'javax.xml.bind:jaxb-api:2.4.0'		// XML 문서와 Java 객체 간 매핑을 자동화
 }
 
 tasks.named('test') {

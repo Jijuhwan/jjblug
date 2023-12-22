@@ -1,7 +1,7 @@
 package com.jjapps.jjblog.controller;
 
 import com.jjapps.jjblog.dto.AddUserRequest;
-import com.jjapps.jjblog.service.MemberSerice;
+import com.jjapps.jjblog.service.MemberService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 @RequiredArgsConstructor
 @Controller
 public class MemberApiController {
-    private final MemberSerice memberSerice;
+    private final MemberService memberService;
     
     @PostMapping("/member")
     public String signup(AddUserRequest request){
         System.out.println("hi?");
-        memberSerice.save(request);     // 회원 가입 메서드 호출
+        memberService.save(request);     // 회원 가입 메서드 호출
         return "redirect:/login";       // 회원 가입이 완료된 이후에 로그인 페이지로 이동
     }
 
