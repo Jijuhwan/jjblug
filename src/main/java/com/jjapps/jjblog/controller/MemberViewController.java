@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MemberViewController {
     @GetMapping("/login")
     public String login(){
-        return "login";
+        return "oauthLogin.html";
     }
 
     @GetMapping("/signup")
